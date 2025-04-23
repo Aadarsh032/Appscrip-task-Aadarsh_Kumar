@@ -1,0 +1,56 @@
+select {
+    background: white;
+    border: none;
+}
+
+option {
+    border: none;
+    padding: 10px;
+    font-family: "Simplon Norm";
+}
+
+.productListMain {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.productListDisplay {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.productItemMain {
+    height: 460px;
+    width: 300px;
+
+
+}
+
+.productItemImage {
+    height: 85%;
+    width: 100%;
+}
+
+.productItemDescription {
+    height: 15%;
+
+}
+
+.productItemTitle {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    /* Optional: limit width */
+    display: block;
+}
+
+.productItemdescription {
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    justify-content: space-between;
+
+}

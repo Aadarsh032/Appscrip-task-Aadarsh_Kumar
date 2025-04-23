@@ -1,0 +1,45 @@
+.navbarTape {
+    height: 25px;
+    width: 100%;
+    background: #000;
+    font-size: 12px;
+    color: #EB4C6B;
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.navcontact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navBarMenu {
+    list-style: none;
+    gap: 70px;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbarMain {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.navbarActionLinks,
+.navbarLanguageDrop {
+    display: flex;
+    align-items: center;
+}
