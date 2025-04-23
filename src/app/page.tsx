@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/Hero";
 import ProductListSection from "@/components/ProductListSection";
+import Footer from "@/components/Footer";
 
 
 
@@ -21,6 +22,7 @@ export default async function Home() {
       <Navbar />
       <HeroSection />
       <ProductListSection productListData={productListData} />
+      <Footer />
     </div>
   );
 }

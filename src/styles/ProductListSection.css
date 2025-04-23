@@ -52,5 +52,28 @@ option {
     font-size: 14px;
     align-items: center;
     justify-content: space-between;
+}
 
+.productListTopBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    border-top: 1px #E5E5E5 solid;
+    border-bottom: 1px #E5E5E5 solid;
+}
+
+.toggleFilterColumn {
+    display: flex;
+}
+
+.productListItemNumber {
+    display: flex;
+    gap: 20px;
+}
+
+.productDisplaySection {
+    display: flex;
 }

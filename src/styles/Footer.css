@@ -1,0 +1,77 @@
+.footerMain {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    color: white;
+    background-color: black;
+}
+
+
+
+.footerTop {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.footerTopLeft {
+    width: 66%;
+}
+
+.footerTopRight {
+    width: 33%;
+}
+
+.footerMiddle {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+}
+
+.footerMiddle_Left,
+.footerMiddle_Middle,
+.footerMiddle_Right {
+    width: 33%;
+
+}
+
+.footerTitles {
+    padding-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.footerBottom {
+    text-align: center;
+    font-size: 14px;
+}
+
+.footerListItems {
+    font-size: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style-type: none;
+}
+
+#emailInput {
+    padding: 10px;
+    width: 50%;
+    font-size: 15px;
+}
+
+#subscribeButton {
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    border: 1px white solid;
+    background-color: black;
+    color: white;
+    width: 150px;
+}
