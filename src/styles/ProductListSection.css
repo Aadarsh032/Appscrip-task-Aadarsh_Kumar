@@ -99,12 +99,12 @@ option {
 @media (max-width:640px) {
     .product-item-main {
         height: 277px;
-        width: 150px;
+        width: 168px;
     }
 
     .product-item-image-box {
         height: 224px;
-        width: 150px;
+        width: 168px;
     }
 
     .product-item-title {
