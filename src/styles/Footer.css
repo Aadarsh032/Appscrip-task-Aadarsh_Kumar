@@ -1,4 +1,4 @@
-.footerMain {
+.footer-main {
     display: flex;
     flex-direction: column;
     padding-left: 5%;
@@ -11,46 +11,46 @@
 
 
 
-.footerTop {
+.footer-top {
     display: flex;
     flex-direction: row;
     padding-top: 10px;
     padding-bottom: 20px;
 }
 
-.footerTopLeft {
+.footer-top-left {
     width: 66%;
 }
 
-.footerTopRight {
+.footer-top-right {
     width: 33%;
 }
 
-.footerMiddle {
+.footer-middle {
     padding-top: 20px;
     padding-bottom: 20px;
     display: flex;
 }
 
-.footerMiddle_Left,
-.footerMiddle_Middle,
-.footerMiddle_Right {
+.footer-middle-left,
+.footer-middle-middle,
+.footer-middle-right {
     width: 33%;
 
 }
 
-.footerTitles {
+.footer-titles {
     padding-bottom: 20px;
     font-size: 24px;
     font-weight: 700;
 }
 
-.footerBottom {
+.footer-bottom {
     text-align: center;
     font-size: 14px;
 }
 
-.footerListItems {
+.footer-list-items {
     font-size: 16px;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -60,13 +60,13 @@
     list-style-type: none;
 }
 
-#emailInput {
+#email-input {
     padding: 10px;
     width: 50%;
     font-size: 15px;
 }
 
-#subscribeButton {
+#subscribe-button {
     padding: 10px;
     border-radius: 5px;
     margin-left: 10px;
@@ -79,4 +79,27 @@
 .social-icons {
     display: flex;
     gap: 10px;
+}
+
+.footer-titles-down-right {
+    margin-top: 25px;
+}
+
+.payment-icons {
+    display: flex;
+    gap: 8px;
+}
+
+.footer-top-right-currency-section-title {
+    padding-top: 20px;
+}
+
+.footer-top-left-description {
+    padding-bottom: 20px;
+}
+
+.footer-top-right-contact-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2px
 }
