@@ -19,10 +19,21 @@ type ProductItem = {
 }
 
 interface ProductListSectionProps {
-    productListData: any[];
+    productListData: {
+        category: string,
+        description: string,
+        id: number,
+        image: string,
+        price: number,
+        rating: {
+            count: number,
+            rate: number
+        },
+        title: string
+    }[];
 }
 
-const idealFor = ["Option 1", "Option 2", "Option 3", "Option 4"];
+const idealFor = ["Men", "Women", "Baby & Kids"];
 const occasion = ["Party", "Festival"];
 const work = ["CASUAL", "FORMAL"];
 const fabric = ["Linen", "Cotton", "Hemp"];
@@ -34,7 +45,7 @@ const patterm = ["Check", "Round", "Square"]
 const ProductListSection: React.FC<ProductListSectionProps> = ({ productListData }) => {
 
     console.log(productListData, "Product List")
-    const [toggleFilterBar, setToggleFilterBar] = useState<boolean>(true)
+    const [toggleFilterBar, setToggleFilterBar] = useState<boolean>(false)
 
     return (
         <div className='product-list-main' >
@@ -44,13 +55,16 @@ const ProductListSection: React.FC<ProductListSectionProps> = ({ productListData
                     <div className='toggle-filter-column'>
                         {
                             toggleFilterBar ?
-                                <span className="material-icons" style={{ fontSize: '15px' }}>arrow_back_ios</span>
+                                <span className="material-symbols-outlined" style={{ fontSize: '15px' }}>arrow_back_ios</span>
                                 :
-                                <span className="material-icons" style={{ fontSize: '15px' }}>arrow_forward_ios</span>
+                                <span className="material-symbols-outlined" style={{ fontSize: '15px' }}>arrow_forward_ios</span>
                         }
 
                         <u onClick={() => setToggleFilterBar(!toggleFilterBar)} >{toggleFilterBar ? 'HIDE FILTER' : 'SHOW FILTER'}</u>
                     </div>
+                </div>
+                <div className='product-list-recomendation-filter'>
+                    <span className='product-list-recomendation-filter-label' >FILTER</span>
                 </div>
                 <div className='product-list-recomendation-drop'>
                     <CustomDropdown />
@@ -84,7 +98,8 @@ const ProductListSection: React.FC<ProductListSectionProps> = ({ productListData
                                     key={index}
                                     image={product.image}
                                     title={product.title}
-                                    productId={product.id} />
+                                    productId={product.id}
+                                    isLiked={true} />
                             )
                         })
                     }

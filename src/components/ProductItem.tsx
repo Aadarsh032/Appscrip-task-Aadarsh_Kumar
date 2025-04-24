@@ -5,10 +5,11 @@ interface ProductItemProps {
     productId: number,
     title: string,
     image: string,
+    isLiked: boolean
 }
 
 const ProductItem: React.FC<ProductItemProps> = (props) => {
-    const bool = false;
+
     return (
         <div className='product-item-main'>
             <Image
@@ -21,9 +22,12 @@ const ProductItem: React.FC<ProductItemProps> = (props) => {
                 <h3 className='product-item-title'>{props.title}</h3>
                 <p className='product-item-description'>
                     Sign in or Create an account to see pricing
-                    <span className="material-icons" style={{ background: bool ? 'red' : 'white' }} >
-                        favorite
-                    </span>
+                    {
+                        props.isLiked ?
+                            <Image src={'/assets/heart_full.png'} alt={'Heart Full'} height={20} width={20} />
+                            :
+                            <Image src={'/assets/heart_empty.png'} alt={'Heart Empty'} height={20} width={20} />
+                    }
                 </p>
             </div>
         </div>

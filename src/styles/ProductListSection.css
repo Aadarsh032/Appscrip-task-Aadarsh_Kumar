@@ -66,6 +66,7 @@ option {
 }
 
 .toggle-filter-column {
+    cursor: pointer;
     color: #888792;
     display: flex;
     align-items: center;
@@ -81,9 +82,107 @@ option {
     display: flex;
 }
 
-.customizable-checkbox {
-    font-weight: 700;
-    font-size: 18px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+.dropdown-checkbox {
+    cursor: pointer;
+}
+
+@media (max-width:300px) {
+    .product-item-main {
+        height: 260px;
+        width: 200px;
+    }
+}
+
+
+
+@media (max-width:640px) {
+    .product-item-main {
+        height: 260px;
+        width: 150px;
+    }
+
+    .product-item-title {
+        font-size: 14px;
+    }
+
+    .product-item-description {
+        font-size: 10px;
+    }
+
+    .product-list-recomendation-filter {
+        font-size: 14px;
+    }
+
+    .product-list-recomendation-filter-label {
+        font-size: 14px;
+    }
+
+    .product-list-top-bar {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
+
+
+
+@media (max-width:1024px) {
+    .product-display-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-list-item-number {
+        display: none;
+    }
+
+    .product-list-recomendation-filter,
+    .product-list-recomendation-drop {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: space-around;
+    }
+
+    .custom-button {
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    .product-list-recomendation-filter {
+        display: block;
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    .customizable-checkbox {
+        display: flex;
+        font-weight: 700;
+        font-size: 18px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+
+}
+
+@media (min-width:1024px) {
+    .product-list-item-number {
+        display: flex;
+    }
+
+    .product-list-recomendation-filter {
+        display: none;
+
+    }
+
+    .customizable-checkbox {
+        display: flex;
+        font-weight: 700;
+        font-size: 18px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+
 }

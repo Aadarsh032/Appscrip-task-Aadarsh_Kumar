@@ -7,9 +7,18 @@ import Footer from "@/components/Footer";
 
 
 
+export const metadata = {
+  title: 'Appscrip Task Aadarsh Kumar',
+  icons: {
+    icon: '/favicon.ico',
+  },
+};
+
+
+
 async function getData() {
   const res = await fetch('https://fakestoreapi.com/products', {
-    cache: 'no-store', // ensures SSR happens every time
+    cache: 'no-store',
   });
   return res.json();
 }
@@ -19,10 +28,10 @@ export default async function Home() {
   const productListData = await getData();
   return (
     <div >
-      <Navbar />
+      {/* <Navbar /> */}
       <HeroSection />
       <ProductListSection productListData={productListData} />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

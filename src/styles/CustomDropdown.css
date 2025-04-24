@@ -73,3 +73,23 @@
     width: 16px;
     margin-right: 8px;
 }
+
+
+
+@media (max-width:640px) {
+
+    .custom-button-label {
+        font-size: 14px;
+        text-overflow: ellipsis;
+    }
+
+    .custom-dropdown-item {
+        font-size: 12px;
+    }
+
+    .custom-button {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+}

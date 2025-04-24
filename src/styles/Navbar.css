@@ -1,4 +1,4 @@
-.navbarTape {
+.navbar-tape {
     height: 25px;
     width: 100%;
     background: #000;
@@ -10,13 +10,13 @@
     padding-right: 10%;
 }
 
-.navcontact {
+.nav-contact {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.navBarMenu {
+.nav-bar-menu {
     list-style: none;
     gap: 70px;
     font-size: 20px;
@@ -28,7 +28,7 @@
     justify-content: center;
 }
 
-.navbarMain {
+.navbar-main {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -38,8 +38,12 @@
     padding-left: 10%;
 }
 
-.navbarActionLinks,
-.navbarLanguageDrop {
+.navbar-action-links,
+.navbar-language-drop {
     display: flex;
     align-items: center;
+}
+
+.navbar-action-links {
+    gap: 20px;
 }

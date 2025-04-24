@@ -91,15 +91,27 @@
 }
 
 .footer-top-right-currency-section-title {
-    padding-top: 20px;
+    margin-top: 30px;
+    padding-bottom: 10px;
 }
 
 .footer-top-left-description {
     padding-bottom: 20px;
+    padding-top: 50px;
 }
 
 .footer-top-right-contact-section {
     display: flex;
     flex-direction: column;
     gap: 2px
+}
+
+.footer-top-right-contact-section-description {
+    padding-top: 10px
+}
+
+.currency-drop {
+    display: flex;
+    align-items: center;
+    gap: 10px
 }

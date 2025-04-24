@@ -7,22 +7,22 @@ const Footer = () => {
         <div className='footer-main' >
             <div className='footer-top' >
                 <div className='footer-top-left'>
-                    <h4 className='footer-titles' >BE THE FIRST TO KNOW</h4>
-                    <p className='footer-list-items'>Sign up for updates from mettā muse</p>
+                    <h4 className='footer-top-left-title' >BE THE FIRST TO KNOW</h4>
+                    <p className='footer-top-left-description'>Sign up for updates from mettā muse</p>
                     <div>
                         <input type='text' id='email-input' placeholder='Enter Your Email Id ...' />
                         <button id='subscribe-button' >SUBSCRIBE</button>
                     </div>
                 </div>
                 <div className='footer-top-right'>
-                    <div>
-                        <h4 className='footer-titles'>CONTACT US</h4>
-                        <p className='footer-list-items' style={{ fontSize: '14px' }}>+44 221 133 5360</p>
-                        <p className='footer-list-items' style={{ fontSize: '14px' }}>customercare@mettamuse.com</p>
+                    <div className='footer-top-right-contact-section'>
+                        <h4 className='footer-top-right-contact-section-title'>CONTACT US</h4>
+                        <p className='footer-top-right-contact-section-description' style={{ fontSize: '14px' }}>+44 221 133 5360</p>
+                        <p className='footer-top-right-contact-section-description' style={{ fontSize: '14px' }}>customercare@mettamuse.com</p>
                     </div>
-                    <div>
-                        <h4>CURRENCY</h4>
-                        <div>
+                    <div className='footer-top-right-currency-section'>
+                        <h4 className='footer-top-right-currency-section-title'>CURRENCY</h4>
+                        <div className='currency-drop'>
                             <Image src={'/assets/USA.png'} alt={'Currency Icon'} width={24} height={24} style={{ borderRadius: '100%' }} />
                             <span>USD</span>
                         </div>
@@ -76,7 +76,7 @@ const Footer = () => {
                 </div>
 
             </div>
-            <div className='footerBottom'>
+            <div className='footer-bottom'>
                 <p>Copyright © 2023 mettamuse. All rights reserved.</p>
             </div>
         </div>

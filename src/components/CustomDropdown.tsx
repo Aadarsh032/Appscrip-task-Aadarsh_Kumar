@@ -9,7 +9,7 @@ const CustomDropdown = ({ theme = "light" }: CustomDropdownProps) => {
     const [isOpen, setIsOpen] = useState(false);
     const [selected, setSelected] = useState("Recommended");
 
-    const options = ["Recommended", "Newest first", "Popular", "Price : high to low", "Price : low to high"];
+    const options = ["Recommended", "Newest First", "Popular", "Price : high to low", "Price : low to high"];
     const isDark = theme === "dark";
 
     const handleSelect = (option: string) => {
@@ -22,11 +22,10 @@ const CustomDropdown = ({ theme = "light" }: CustomDropdownProps) => {
             <button
                 className={`custom-button ${isDark ? "dark" : "light"}`}
                 onClick={() => setIsOpen(!isOpen)}
-
             >
-                {selected}
+                <span className="custom-button-label">{selected.toUpperCase()}</span>
                 <span
-                    className="material-icons"
+                    className="material-symbols-outlined"
                     style={{ color: isDark ? "#fff" : "#000" }}
                 >
                     keyboard_arrow_down
@@ -45,13 +44,13 @@ const CustomDropdown = ({ theme = "light" }: CustomDropdownProps) => {
                                 onClick={() => handleSelect(option)}
                             >
                                 {isSelected ? (
-                                    <span className={`material-icons custom-check-icon ${isDark ? "dark" : "light"}`}>
+                                    <span className={`material-symbols-outlined custom-check-icon ${isDark ? "dark" : "light"}`}>
                                         check
                                     </span>
                                 ) : (
                                     <span className="empty-icon" />
                                 )}
-                                {option}
+                                {option.toUpperCase()}
                             </li>
                         );
                     })}

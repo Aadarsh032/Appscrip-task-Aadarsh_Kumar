@@ -36,7 +36,7 @@ const MultiSelectDropdown = ({ theme, options, title }: MultiSelectDropdownProps
             >
                 <span className="drop-down-top">
                     {title}
-                    <span className="material-icons">
+                    <span className="material-symbols-outlined">
                         keyboard_arrow_down
                     </span>
                 </span>
