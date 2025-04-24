@@ -61,7 +61,7 @@ const Footer = () => {
                     <div>
 
                     </div>
-                    <h4 className='footerTitles'></h4>
+                    <h4 className='footerTitles'>mettā muse Accepts</h4>
                     <div>
 
                     </div>

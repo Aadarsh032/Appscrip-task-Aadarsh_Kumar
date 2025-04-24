@@ -9,36 +9,35 @@ option {
     font-family: "Simplon Norm";
 }
 
-.productListMain {
+.product-list-main {
     padding-left: 5%;
     padding-right: 5%;
 }
 
-.productListDisplay {
+.product-list-display {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 10px;
 }
 
-.productItemMain {
+.product-item-main {
     height: 460px;
     width: 300px;
-
-
 }
 
-.productItemImage {
+.product-item-image {
     height: 85%;
     width: 100%;
 }
 
-.productItemDescription {
-    height: 15%;
 
+.product-list-filter-column {
+    transition: all;
+    transition-duration: 1000ms;
 }
 
-.productItemTitle {
+.product-item-title {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -47,14 +46,15 @@ option {
     display: block;
 }
 
-.productItemdescription {
+.product-item-description {
     display: flex;
+    height: 15%;
     font-size: 14px;
     align-items: center;
     justify-content: space-between;
 }
 
-.productListTopBar {
+.product-list-top-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -65,15 +65,25 @@ option {
     border-bottom: 1px #E5E5E5 solid;
 }
 
-.toggleFilterColumn {
+.toggle-filter-column {
+    color: #888792;
     display: flex;
+    align-items: center;
 }
 
-.productListItemNumber {
+.product-list-item-number {
+    font-size: 18px;
     display: flex;
     gap: 20px;
 }
 
-.productDisplaySection {
+.product-display-section {
     display: flex;
+}
+
+.customizable-checkbox {
+    font-weight: 700;
+    font-size: 18px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }

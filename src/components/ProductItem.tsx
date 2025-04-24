@@ -10,16 +10,16 @@ interface ProductItemProps {
 const ProductItem: React.FC<ProductItemProps> = (props) => {
     const bool = false;
     return (
-        <div className='productItemMain'>
+        <div className='product-item-main'>
             <Image
                 src={`${props.image}`}
                 alt={props.title} width={200} height={462}
-                className='productItemImage'
+                className='product-item-image'
                 style={{ objectFit: 'contain' }}
             />
-            <div className='productItemDescription'>
-                <h3 className='productItemTitle'>{props.title}</h3>
-                <p className='productItemdescription'>
+            <div className='product-item-info'>
+                <h3 className='product-item-title'>{props.title}</h3>
+                <p className='product-item-description'>
                     Sign in or Create an account to see pricing
                     <span className="material-icons" style={{ background: bool ? 'red' : 'white' }} >
                         favorite
