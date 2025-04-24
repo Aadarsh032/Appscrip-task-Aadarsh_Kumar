@@ -28,7 +28,7 @@ export default async function Home() {
   const productListData = await getData();
   return (
     <div >
-      {/* <Navbar /> */}
+      <Navbar />
       <HeroSection />
       <ProductListSection productListData={productListData} />
       {/* <Footer /> */}

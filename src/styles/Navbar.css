@@ -47,3 +47,69 @@
 .navbar-action-links {
     gap: 20px;
 }
+
+@media (max-width:1024px) {
+
+    .nav-bar-menu {
+        font-size: 14px;
+    }
+
+    .navbar-action-links {
+        gap: 5px;
+    }
+
+    .navbar-language-drop {
+        display: none;
+    }
+}
+
+@media (max-width:640px) {
+
+    .nav-bar-menu {
+        display: none;
+    }
+
+    .navbar-main {
+        padding-bottom: 0px;
+    }
+
+    .navbar-action-links {
+        gap: 5px;
+    }
+
+    .navbar-language-drop {
+        display: none;
+    }
+
+    .company-logo {
+        height: 20px;
+        width: 20px;
+    }
+
+    #person-icon {
+        display: none;
+    }
+
+    .company-name {
+        height: 20px;
+        width: 75px;
+    }
+
+    .navbar-logo-menu {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    #nav-contact-1,
+    #nav-contact-2 {
+        display: none;
+    }
+}
+
+@media (min-width:640px) {
+
+    #nav-menu-icon {
+        display: none;
+    }
+}
