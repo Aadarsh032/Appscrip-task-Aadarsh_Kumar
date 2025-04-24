@@ -58,11 +58,19 @@ const Footer = () => {
                 </div>
                 <div className='footerMiddle_Right'>
                     <h4 className='footerTitles'>FOLLOW US</h4>
-                    <div>
+                    <div className='social-icons'>
+                        <Image src={'/assets/insta.svg'} alt={'Instagram'} width={30} height={30} />
+                        <Image src={'/assets/linkedin.svg'} alt={'Linkedin'} width={30} height={30} />
 
                     </div>
                     <h4 className='footerTitles'>mettā muse Accepts</h4>
-                    <div>
+                    <div className='payment-icons'>
+                        <Image src={'/assets/gpay.svg'} alt={'Google Pay'} width={50} height={50} />
+                        <Image src={'/assets/mastercard.svg'} alt={'MasterCard'} width={50} height={50} />
+                        <Image src={'/assets/paypal.svg'} alt={'Paypal'} width={50} height={50} />
+                        <Image src={'/assets/amex.svg'} alt={'Amex'} width={50} height={50} />
+                        <Image src={'/assets/applepay.svg'} alt={'Apple Pay'} width={50} height={50} />
+                        <Image src={'/assets/opay.svg'} alt={'O Pay'} width={50} height={50} />
 
                     </div>
                 </div>
