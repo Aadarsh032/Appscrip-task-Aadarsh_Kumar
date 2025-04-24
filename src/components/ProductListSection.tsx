@@ -42,9 +42,27 @@ const suitableFor = ["Kids", "Old", "Women"];
 const rawMaterials = ["Hemp", "Cotton", "Leather"];
 const patterm = ["Check", "Round", "Square"]
 
+
+function ProcessProductListData(productListData: ProductItem[]) {
+
+
+    const data = productListData.map((product, index) => {
+        return {
+            ...product,
+            isLiked: index === 3,
+        }
+    })
+
+    return data
+
+}
+
+
+
 const ProductListSection: React.FC<ProductListSectionProps> = ({ productListData }) => {
 
-    console.log(productListData, "Product List")
+    const processedProductList = ProcessProductListData(productListData)
+
     const [toggleFilterBar, setToggleFilterBar] = useState<boolean>(false)
     const options = ["Recommended", "Newest First", "Popular", "Price : high to low", "Price : low to high"];
 
@@ -52,7 +70,7 @@ const ProductListSection: React.FC<ProductListSectionProps> = ({ productListData
         <div className='product-list-main' >
             <div className='product-list-top-bar' >
                 <div className='product-list-item-number'>
-                    <span>{productListData.length} ITEMS</span>
+                    <span>{processedProductList.length} ITEMS</span>
                     <div className='toggle-filter-column'>
                         {
                             toggleFilterBar ?
@@ -93,14 +111,15 @@ const ProductListSection: React.FC<ProductListSectionProps> = ({ productListData
                 </div>
                 <div className='product-list-display' style={{ width: toggleFilterBar ? '75%' : '100%' }}>
                     {
-                        productListData.map((product, index) => {
+                        processedProductList.map((product, index) => {
                             return (
                                 <ProductItem
                                     key={index}
                                     image={product.image}
                                     title={product.title}
                                     productId={product.id}
-                                    isLiked={true} />
+                                    isLiked={product.isLiked}
+                                />
                             )
                         })
                     }

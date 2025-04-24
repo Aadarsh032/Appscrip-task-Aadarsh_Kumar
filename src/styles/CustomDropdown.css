@@ -42,14 +42,10 @@
 }
 
 
-.custom-dropdown-item.dark:hover {
-    background-color: #1a1a1a;
-}
+.custom-dropdown-item.dark:hover {}
 
 
-.custom-dropdown-item.selected.dark {
-    background-color: #1a1a1a;
-}
+.custom-dropdown-item.selected.dark {}
 
 .custom-check-icon {
     margin-right: 8px;

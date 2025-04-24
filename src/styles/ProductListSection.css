@@ -97,9 +97,14 @@ option {
 
 
 @media (max-width:640px) {
+    .product-item-main {
+        height: 277px;
+        width: 150px;
+    }
+
     .product-item-image-box {
-        height: 260px;
-        width: 200px;
+        height: 224px;
+        width: 150px;
     }
 
     .product-item-title {

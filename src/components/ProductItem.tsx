@@ -5,14 +5,15 @@ interface ProductItemProps {
     productId: number,
     title: string,
     image: string,
-    isLiked: boolean
+    isLiked: boolean,
+
 }
 
 const ProductItem: React.FC<ProductItemProps> = (props) => {
 
     return (
         <div className='product-item-main'>
-            <div className='product-item-image-box' style={{ height: '399px', width: '300px' }}>
+            <div className='product-item-image-box'>
                 <Image
                     src={`${props.image}`}
                     alt={props.title} width={200} height={462}
