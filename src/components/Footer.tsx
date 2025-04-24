@@ -1,6 +1,13 @@
 import React from 'react'
 import '../styles/Footer.css'
 import Image from 'next/image'
+import CustomDropdown from './CustomDropdown'
+
+const quickLinks = ["Orders & Shipping", "Join/Login as a Seller", "Payment & Pricing", "Return & Refunds", "FAQs", "Privacy Policy", "Terms & Conditions"];
+
+const metta_muse = ["About Us", "Stories", "Artisans", "Boutiques", "Contact Us", "EU Compliances Docs"]
+
+const followUs = ["Instagram", "Linkedin"]
 
 const Footer = () => {
     return (
@@ -17,8 +24,10 @@ const Footer = () => {
                 <div className='footer-top-right'>
                     <div className='footer-top-right-contact-section'>
                         <h4 className='footer-top-right-contact-section-title'>CONTACT US</h4>
-                        <p className='footer-top-right-contact-section-description' style={{ fontSize: '14px' }}>+44 221 133 5360</p>
-                        <p className='footer-top-right-contact-section-description' style={{ fontSize: '14px' }}>customercare@mettamuse.com</p>
+                        <div className='footer-top-right-contact'>
+                            <p className='footer-top-right-contact-section-description' style={{ fontSize: '14px' }}>+44 221 133 5360</p>
+                            <p className='footer-top-right-contact-section-description' style={{ fontSize: '14px' }}>customercare@mettamuse.com</p>
+                        </div>
                     </div>
                     <div className='footer-top-right-currency-section'>
                         <h4 className='footer-top-right-currency-section-title'>CURRENCY</h4>
@@ -26,7 +35,7 @@ const Footer = () => {
                             <Image src={'/assets/USA.png'} alt={'Currency Icon'} width={24} height={24} style={{ borderRadius: '100%' }} />
                             <span>USD</span>
                         </div>
-                        <p className='footer-list-items' style={{ fontSize: '12px' }}>Transactions will be completed in Euros and a currency reference is available on hover.</p>
+                        <p id='currency-description' className='footer-list-items' style={{ fontSize: '12px' }}>Transactions will be completed in Euros and a currency reference is available on hover.</p>
                     </div>
 
                 </div>
@@ -43,6 +52,7 @@ const Footer = () => {
                         <li>Contact Us</li>
                         <li>EU Compliances Docs</li>
                     </ul>
+                    <CustomDropdown title='mettā muse' theme='dark' options={metta_muse} checkSelected={false} />
                 </div>
                 <div className='footer-middle-middle'>
                     <h4 className='footer-titles'>QUICK LINKS</h4>
@@ -55,14 +65,17 @@ const Footer = () => {
                         <li>Privacy Policy</li>
                         <li>Terms & Conditions</li>
                     </ul>
+
+                    <CustomDropdown title='QUICK LINKS' theme='dark' options={quickLinks} checkSelected={false} />
+
                 </div>
                 <div className='footer-middle-right'>
                     <h4 className='footer-titles'>FOLLOW US</h4>
                     <div className='social-icons'>
                         <Image src={'/assets/insta.svg'} alt={'Instagram'} width={30} height={30} />
                         <Image src={'/assets/linkedin.svg'} alt={'Linkedin'} width={30} height={30} />
-
                     </div>
+                    <CustomDropdown title='FOLLOW US' theme='dark' options={followUs} checkSelected={false} />
                     <h4 className='footer-titles-down-right'>mettā muse Accepts</h4>
                     <div className='payment-icons'>
                         <Image src={'/assets/gpay.svg'} alt={'Google Pay'} width={50} height={50} />

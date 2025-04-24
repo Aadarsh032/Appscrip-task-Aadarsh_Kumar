@@ -1,15 +1,17 @@
+"use client"
 import { useState } from "react";
 import "../styles/CustomDropdown.css";
 
 interface CustomDropdownProps {
     theme?: "light" | "dark";
     options: string[],
-    checkSelected: boolean
+    checkSelected: boolean,
+    title: string,
 }
 
-const CustomDropdown = ({ theme, options, checkSelected }: CustomDropdownProps) => {
+const CustomDropdown = ({ theme, options, checkSelected, title }: CustomDropdownProps) => {
     const [isOpen, setIsOpen] = useState(false);
-    const [selected, setSelected] = useState("Recommended");
+    const [selected, setSelected] = useState<string>(title);
 
     const isDark = theme === "dark";
 
@@ -18,12 +20,12 @@ const CustomDropdown = ({ theme, options, checkSelected }: CustomDropdownProps) 
         setIsOpen(false);
     };
     return (
-        <div className="custom-dropdown">
+        <div className={`custom-dropdown ${isDark ? "dark" : "light"}`}>
             <button
                 className={`custom-button ${isDark ? "dark" : "light"}`}
                 onClick={() => setIsOpen(!isOpen)}
             >
-                <span className="custom-button-label">{selected.toUpperCase()}</span>
+                <span className="custom-button-label">{selected?.toUpperCase()}</span>
                 <span
                     className="material-symbols-outlined"
                     style={{ color: isDark ? "#fff" : "#000" }}
@@ -41,14 +43,14 @@ const CustomDropdown = ({ theme, options, checkSelected }: CustomDropdownProps) 
                                 key={option}
                                 className={`custom-dropdown-item  ${isDark ? "dark" : "light"} `}
                                 style={{ fontWeight: isSelected ? 'bold' : 'normal' }}
-                                onClick={checkSelected ? undefined : () => handleSelect(option)}
+                                onClick={checkSelected ? () => handleSelect(option) : undefined}
                             >
-                                {isSelected && checkSelected ? (
+                                {(isSelected && checkSelected) ? (
                                     <span className={`material-symbols-outlined custom-check-icon ${isDark ? "dark" : "light"}`}>
                                         check
                                     </span>
                                 ) : (
-                                    <span className="empty-icon" />
+                                    <span className="empty-icon" style={{ display: checkSelected ? 'block' : 'none' }} />
                                 )}
                                 {option.toUpperCase()}
                             </li>

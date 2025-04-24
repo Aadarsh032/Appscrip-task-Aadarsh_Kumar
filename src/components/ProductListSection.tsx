@@ -68,7 +68,7 @@ const ProductListSection: React.FC<ProductListSectionProps> = ({ productListData
                     <span className='product-list-recomendation-filter-label' >FILTER</span>
                 </div>
                 <div className='product-list-recomendation-drop'>
-                    <CustomDropdown theme='light' options={options} checkSelected={false} />
+                    <CustomDropdown theme='light' options={options} checkSelected={true} title={'Recommended'} />
                 </div>
             </div>
             <div className='product-display-section' >

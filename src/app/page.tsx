@@ -31,7 +31,7 @@ export default async function Home() {
       <Navbar />
       <HeroSection />
       <ProductListSection productListData={productListData} />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

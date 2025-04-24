@@ -12,12 +12,15 @@ const ProductItem: React.FC<ProductItemProps> = (props) => {
 
     return (
         <div className='product-item-main'>
-            <Image
-                src={`${props.image}`}
-                alt={props.title} width={200} height={462}
-                className='product-item-image'
-                style={{ objectFit: 'contain' }}
-            />
+            <div className='product-item-image-box' style={{ height: '399px', width: '300px' }}>
+                <Image
+                    src={`${props.image}`}
+                    alt={props.title} width={200} height={462}
+                    className='product-item-image'
+                    style={{ objectFit: 'contain' }}
+                />
+            </div>
+
             <div className='product-item-info'>
                 <h3 className='product-item-title'>{props.title}</h3>
                 <p className='product-item-description'>

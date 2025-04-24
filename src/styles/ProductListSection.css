@@ -26,8 +26,13 @@ option {
     width: 300px;
 }
 
+.product-item-image-box {
+    height: 399px;
+    width: 300px;
+}
+
 .product-item-image {
-    height: 85%;
+    height: 100%;
     width: 100%;
 }
 
@@ -87,19 +92,14 @@ option {
     cursor: pointer;
 }
 
-@media (max-width:300px) {
-    .product-item-main {
-        height: 260px;
-        width: 200px;
-    }
-}
+@media (max-width:300px) {}
 
 
 
 @media (max-width:640px) {
-    .product-item-main {
+    .product-item-image-box {
         height: 260px;
-        width: 150px;
+        width: 200px;
     }
 
     .product-item-title {
