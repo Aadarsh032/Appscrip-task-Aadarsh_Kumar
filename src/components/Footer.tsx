@@ -4,9 +4,7 @@ import Image from 'next/image'
 import CustomDropdown from './CustomDropdown'
 
 const quickLinks = ["Orders & Shipping", "Join/Login as a Seller", "Payment & Pricing", "Return & Refunds", "FAQs", "Privacy Policy", "Terms & Conditions"];
-
 const metta_muse = ["About Us", "Stories", "Artisans", "Boutiques", "Contact Us", "EU Compliances Docs"]
-
 const followUs = ["Instagram", "Linkedin"]
 
 const Footer = () => {
@@ -45,29 +43,28 @@ const Footer = () => {
                 <div className='footer-middle-left'>
                     <h4 className='footer-titles'>mettā muse</h4>
                     <ul className='footer-list-items'>
-                        <li>About Us</li>
-                        <li>Stories</li>
-                        <li>Artisans</li>
-                        <li>Boutiques</li>
-                        <li>Contact Us</li>
-                        <li>EU Compliances Docs</li>
+                        {
+                            metta_muse.map((item, index) => {
+                                return (
+                                    <li key={index} >{item}</li>
+                                )
+                            })
+                        }
                     </ul>
                     <CustomDropdown title='mettā muse' theme='dark' options={metta_muse} checkSelected={false} />
                 </div>
                 <div className='footer-middle-middle'>
                     <h4 className='footer-titles'>QUICK LINKS</h4>
                     <ul className='footer-list-items'>
-                        <li>Orders & Shipping</li>
-                        <li>Join/Login as a Seller</li>
-                        <li>Payment & Pricing</li>
-                        <li>Return & Refunds</li>
-                        <li> FAQs</li>
-                        <li>Privacy Policy</li>
-                        <li>Terms & Conditions</li>
+                        {
+                            quickLinks.map((links, index) => {
+                                return (
+                                    <li key={index} >{links}</li>
+                                )
+                            })
+                        }
                     </ul>
-
                     <CustomDropdown title='QUICK LINKS' theme='dark' options={quickLinks} checkSelected={false} />
-
                 </div>
                 <div className='footer-middle-right'>
                     <h4 className='footer-titles'>FOLLOW US</h4>
@@ -84,10 +81,8 @@ const Footer = () => {
                         <Image src={'/assets/amex.svg'} alt={'Amex'} width={50} height={50} />
                         <Image src={'/assets/applepay.svg'} alt={'Apple Pay'} width={50} height={50} />
                         <Image src={'/assets/opay.svg'} alt={'O Pay'} width={50} height={50} />
-
                     </div>
                 </div>
-
             </div>
             <div className='footer-bottom'>
                 <p>Copyright © 2023 mettamuse. All rights reserved.</p>

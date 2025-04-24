@@ -17,7 +17,6 @@ type ProductItem = {
     },
     title: string
 }
-
 interface ProductListSectionProps {
     productListData: {
         category: string,
@@ -32,7 +31,6 @@ interface ProductListSectionProps {
         title: string
     }[];
 }
-
 const idealFor = ["Men", "Women", "Baby & Kids"];
 const occasion = ["Party", "Festival"];
 const work = ["CASUAL", "FORMAL"];
@@ -42,27 +40,18 @@ const suitableFor = ["Kids", "Old", "Women"];
 const rawMaterials = ["Hemp", "Cotton", "Leather"];
 const patterm = ["Check", "Round", "Square"]
 
-
 function ProcessProductListData(productListData: ProductItem[]) {
-
-
     const data = productListData.map((product, index) => {
         return {
             ...product,
             isLiked: index === 3,
         }
     })
-
     return data
-
 }
 
-
-
 const ProductListSection: React.FC<ProductListSectionProps> = ({ productListData }) => {
-
     const processedProductList = ProcessProductListData(productListData)
-
     const [toggleFilterBar, setToggleFilterBar] = useState<boolean>(false)
     const options = ["Recommended", "Newest First", "Popular", "Price : high to low", "Price : low to high"];
 
@@ -78,7 +67,6 @@ const ProductListSection: React.FC<ProductListSectionProps> = ({ productListData
                                 :
                                 <span className="material-symbols-outlined" style={{ fontSize: '15px' }}>arrow_forward_ios</span>
                         }
-
                         <u onClick={() => setToggleFilterBar(!toggleFilterBar)} >{toggleFilterBar ? 'HIDE FILTER' : 'SHOW FILTER'}</u>
                     </div>
                 </div>

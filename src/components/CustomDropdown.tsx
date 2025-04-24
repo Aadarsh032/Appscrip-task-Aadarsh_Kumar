@@ -12,24 +12,18 @@ interface CustomDropdownProps {
 const CustomDropdown = ({ theme, options, checkSelected, title }: CustomDropdownProps) => {
     const [isOpen, setIsOpen] = useState(false);
     const [selected, setSelected] = useState<string>(title);
-
     const isDark = theme === "dark";
-
     const handleSelect = (option: string) => {
         setSelected(option);
         setIsOpen(false);
     };
     return (
         <div className={`custom-dropdown ${isDark ? "dark" : "light"}`}>
-            <button
-                className={`custom-button ${isDark ? "dark" : "light"}`}
-                onClick={() => setIsOpen(!isOpen)}
-            >
+            <button className={`custom-button ${isDark ? "dark" : "light"}`}
+                onClick={() => setIsOpen(!isOpen)} >
                 <span className="custom-button-label">{selected?.toUpperCase()}</span>
-                <span
-                    className="material-symbols-outlined"
-                    style={{ color: isDark ? "#fff" : "#000" }}
-                >
+                <span className="material-symbols-outlined"
+                    style={{ color: isDark ? "#fff" : "#000" }}>
                     keyboard_arrow_down
                 </span>
             </button>

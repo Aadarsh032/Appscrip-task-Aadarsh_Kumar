@@ -9,8 +9,6 @@
     background-color: black;
 }
 
-
-
 .footer-top {
     display: flex;
     flex-direction: row;
@@ -36,7 +34,6 @@
 .footer-middle-middle,
 .footer-middle-right {
     width: 33%;
-
 }
 
 .footer-titles {
@@ -117,7 +114,6 @@
     gap: 10px
 }
 
-
 @media (max-width:768px) {
     .footer-top {
         display: flex;
@@ -132,13 +128,10 @@
         width: 100%;
     }
 
-
     .footer-top-left-description {
         padding-top: 13px;
         padding-bottom: 6px;
     }
-
-
 
     .footer-top-right-contact-section {
         padding-top: 30px;
@@ -177,6 +170,4 @@
     .social-icons {
         display: none;
     }
-
-
 }

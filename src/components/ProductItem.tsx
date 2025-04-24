@@ -6,11 +6,9 @@ interface ProductItemProps {
     title: string,
     image: string,
     isLiked: boolean,
-
 }
 
 const ProductItem: React.FC<ProductItemProps> = (props) => {
-
     return (
         <div className='product-item-main'>
             <div className='product-item-image-box'>
@@ -21,7 +19,6 @@ const ProductItem: React.FC<ProductItemProps> = (props) => {
                     style={{ objectFit: 'contain' }}
                 />
             </div>
-
             <div className='product-item-info'>
                 <h3 className='product-item-title'>{props.title}</h3>
                 <p className='product-item-description'>

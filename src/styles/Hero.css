@@ -1,7 +1,6 @@
 @media (min-width:1536px) {
     .hero-mobileview-option {
         display: none;
-
     }
 
     .hero-section {
@@ -23,7 +22,6 @@
         padding-bottom: 40px;
     }
 }
-
 
 @media (max-width:1536px) {
     .hero-mobileview-option {
@@ -47,11 +45,8 @@
         line-height: 30px;
         margin: auto;
         padding-bottom: 40px;
-
     }
 }
-
-
 
 @media (max-width:640px) {
     .hero-mobileview-option {
