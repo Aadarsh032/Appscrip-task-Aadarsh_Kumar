@@ -108,6 +108,9 @@
 }
 
 @media (min-width:640px) {
+    .navbar-tape {
+        background: #000;
+    }
 
     #nav-menu-icon {
         display: none;

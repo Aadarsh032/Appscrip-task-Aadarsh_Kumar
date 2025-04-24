@@ -3,20 +3,20 @@ import "../styles/CustomDropdown.css";
 
 interface CustomDropdownProps {
     theme?: "light" | "dark";
+    options: string[],
+    checkSelected: boolean
 }
 
-const CustomDropdown = ({ theme = "light" }: CustomDropdownProps) => {
+const CustomDropdown = ({ theme, options, checkSelected }: CustomDropdownProps) => {
     const [isOpen, setIsOpen] = useState(false);
     const [selected, setSelected] = useState("Recommended");
 
-    const options = ["Recommended", "Newest First", "Popular", "Price : high to low", "Price : low to high"];
     const isDark = theme === "dark";
 
     const handleSelect = (option: string) => {
         setSelected(option);
         setIsOpen(false);
     };
-
     return (
         <div className="custom-dropdown">
             <button
@@ -41,9 +41,9 @@ const CustomDropdown = ({ theme = "light" }: CustomDropdownProps) => {
                                 key={option}
                                 className={`custom-dropdown-item  ${isDark ? "dark" : "light"} `}
                                 style={{ fontWeight: isSelected ? 'bold' : 'normal' }}
-                                onClick={() => handleSelect(option)}
+                                onClick={checkSelected ? undefined : () => handleSelect(option)}
                             >
-                                {isSelected ? (
+                                {isSelected && checkSelected ? (
                                     <span className={`material-symbols-outlined custom-check-icon ${isDark ? "dark" : "light"}`}>
                                         check
                                     </span>

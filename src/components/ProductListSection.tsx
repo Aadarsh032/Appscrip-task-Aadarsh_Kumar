@@ -46,6 +46,7 @@ const ProductListSection: React.FC<ProductListSectionProps> = ({ productListData
 
     console.log(productListData, "Product List")
     const [toggleFilterBar, setToggleFilterBar] = useState<boolean>(false)
+    const options = ["Recommended", "Newest First", "Popular", "Price : high to low", "Price : low to high"];
 
     return (
         <div className='product-list-main' >
@@ -67,7 +68,7 @@ const ProductListSection: React.FC<ProductListSectionProps> = ({ productListData
                     <span className='product-list-recomendation-filter-label' >FILTER</span>
                 </div>
                 <div className='product-list-recomendation-drop'>
-                    <CustomDropdown />
+                    <CustomDropdown theme='light' options={options} checkSelected={false} />
                 </div>
             </div>
             <div className='product-display-section' >
