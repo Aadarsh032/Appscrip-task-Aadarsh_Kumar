@@ -1,8 +1,10 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import '../styles/Navbar.css'
 import Image from 'next/image'
 
 const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
         <div className='navbar'>
             <div className='navbar-tape'>
@@ -21,7 +23,11 @@ const Navbar = () => {
             </div>
             <div className='navbar-main'>
                 <div className='navbar-logo-menu'>
-                    <span id='nav-menu-icon' className="material-symbols-outlined">menu</span>
+                    <span id='nav-menu-icon'
+                        className="material-symbols-outlined"
+                        onClick={() => setIsMenuOpen(!isMenuOpen)} >
+                        {isMenuOpen ? 'close' : 'menu'}
+                    </span>
                     <Image className='company-logo' src={'/assets/CompanyLogo.png'} alt={'Logo'} width={36} height={36} />
                 </div>
                 <Image className='company-name' src={'/assets/CompanyName.png'} alt={'BrandName'} width={107} height={30} />
@@ -36,7 +42,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-            <ul className='nav-bar-menu'>
+            <ul className={`nav-bar-menu ${isMenuOpen ? 'open' : ''} `} >
                 <li>SHOP</li>
                 <li>SKILLS</li>
                 <li>STORIES</li>

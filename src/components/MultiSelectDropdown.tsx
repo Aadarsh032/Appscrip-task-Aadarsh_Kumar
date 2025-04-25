@@ -26,13 +26,9 @@ const MultiSelectDropdown = ({ theme, options, title }: MultiSelectDropdownProps
                 onClick={() => setIsOpen(!isOpen)} >
                 <span className="drop-down-top">
                     {title}
-                    <span className="material-symbols-outlined">
-                        keyboard_arrow_down
-                    </span>
+                    <span className="material-symbols-outlined"> keyboard_arrow_down </span>
                 </span>
-                <span className="drop-down-bottom">
-                    All
-                </span>
+                <span className="drop-down-bottom">All</span>
             </button>
             {isOpen && (
                 <ul className={`dropdown-list ${theme}`}>

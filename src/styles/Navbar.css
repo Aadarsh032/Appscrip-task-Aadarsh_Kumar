@@ -64,7 +64,21 @@
 
 @media (max-width:640px) {
     .nav-bar-menu {
-        display: none;
+        flex-direction: row;
+        gap: 10px;
+        position: absolute;
+        top: 70px;
+        width: 100%;
+        background: white;
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .nav-bar-menu.open {
+        font-size: 12px;
+        max-height: 80px;
+        opacity: 1;
+        padding: 10px;
     }
 
     .navbar-main {
