@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/Hero";
 import ProductListSection from "@/components/ProductListSection";
 import Footer from "@/components/Footer";
+import Head from "next/head";
 
 
 
@@ -25,10 +26,32 @@ async function getData() {
 }
 
 export default async function Home() {
-
   const productListData = await getData();
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Appscrip Task Aadarsh Kumar",
+    "description": "Next.js project fetching products from fakestoreapi.com.",
+    "url": "https://appscrip-task-aadarsh-kumar.vercel.app/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "LOGO",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "/favicon.ico",
+      }
+    },
+  };
   return (
     <div >
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaData),
+          }}
+        />
+      </Head>
       <Navbar />
       <HeroSection />
       <ProductListSection productListData={productListData} />
