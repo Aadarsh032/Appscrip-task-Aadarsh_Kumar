@@ -18,7 +18,9 @@ export const metadata = {
 
 async function getData() {
   const res = await fetch('https://fakestoreapi.com/products', {
-    cache: 'no-store',
+    // As the fakeStore Api is Static so i am using force-caches , 
+    // if it would have ben dynamic then i whould have used revalidate or cache
+    cache: 'force-cache',
   });
   return res.json();
 }
