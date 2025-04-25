@@ -30,12 +30,11 @@ const Footer = () => {
                     <div className='footer-top-right-currency-section'>
                         <h4 className='footer-top-right-currency-section-title'>CURRENCY</h4>
                         <div className='currency-drop'>
-                            <Image src={'/assets/USA.png'} alt={'Currency Icon'} width={24} height={24} style={{ borderRadius: '100%' }} />
+                            <Image src={'/assets/flags/usa.png'} alt={'US flag for USD currency'} width={24} height={24} style={{ borderRadius: '100%' }} />
                             <span>USD</span>
                         </div>
                         <p id='currency-description' className='footer-list-items' style={{ fontSize: '12px' }}>Transactions will be completed in Euros and a currency reference is available on hover.</p>
                     </div>
-
                 </div>
             </div>
             <hr />
@@ -69,18 +68,18 @@ const Footer = () => {
                 <div className='footer-middle-right'>
                     <h4 className='footer-titles'>FOLLOW US</h4>
                     <div className='social-icons'>
-                        <Image src={'/assets/insta.svg'} alt={'Instagram'} width={30} height={30} />
-                        <Image src={'/assets/linkedin.svg'} alt={'Linkedin'} width={30} height={30} />
+                        <Image src={'/assets/social/instagram.svg'} alt={'Visit us on Instagram'} width={30} height={30} />
+                        <Image src={'/assets/social/linkedin.svg'} alt={'Visit us on Linkedin'} width={30} height={30} />
                     </div>
                     <CustomDropdown title='FOLLOW US' theme='dark' options={followUs} checkSelected={false} />
                     <h4 className='footer-titles-down-right'>mettā muse Accepts</h4>
                     <div className='payment-icons'>
-                        <Image src={'/assets/gpay.svg'} alt={'Google Pay'} width={50} height={50} />
-                        <Image src={'/assets/mastercard.svg'} alt={'MasterCard'} width={50} height={50} />
-                        <Image src={'/assets/paypal.svg'} alt={'Paypal'} width={50} height={50} />
-                        <Image src={'/assets/amex.svg'} alt={'Amex'} width={50} height={50} />
-                        <Image src={'/assets/applepay.svg'} alt={'Apple Pay'} width={50} height={50} />
-                        <Image src={'/assets/opay.svg'} alt={'O Pay'} width={50} height={50} />
+                        <Image src={'/assets/payments/google-pay.svg'} alt={'Google Pay'} width={50} height={50} />
+                        <Image src={'/assets/payments/mastercard.svg'} alt={'MasterCard'} width={50} height={50} />
+                        <Image src={'/assets/payments/paypal.svg'} alt={'Paypal'} width={50} height={50} />
+                        <Image src={'/assets/payments/amex.svg'} alt={'Amex'} width={50} height={50} />
+                        <Image src={'/assets/payments/apple-pay.svg'} alt={'Apple Pay'} width={50} height={50} />
+                        <Image src={'/assets/payments/o-pay.svg'} alt={'O Pay'} width={50} height={50} />
                     </div>
                 </div>
             </div>

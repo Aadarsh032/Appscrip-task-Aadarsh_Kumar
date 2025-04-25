@@ -9,15 +9,15 @@ const Navbar = () => {
         <div className='navbar'>
             <div className='navbar-tape'>
                 <div className='nav-contact' id='nav-contact-1'>
-                    <Image src={'/assets/stripIcon.png'} alt={'Contact 1'} width={20} height={20} />
+                    <Image src={'/assets/stripIcon.png'} alt={'Contact info 1'} width={20} height={20} />
                     <p>Lorem ipsum dolor</p>
                 </div>
                 <div className='nav-contact'>
-                    <Image src={'/assets/stripIcon.png'} alt={'Contact 2'} width={20} height={20} />
+                    <Image src={'/assets/stripIcon.png'} alt={'Contact info 2'} width={20} height={20} />
                     <p>Lorem ipsum dolor</p>
                 </div>
                 <div className='nav-contact' id='nav-contact-2'>
-                    <Image src={'/assets/stripIcon.png'} alt={'Contact 3'} width={20} height={20} />
+                    <Image src={'/assets/stripIcon.png'} alt={'Contact info 3'} width={20} height={20} />
                     <p>Lorem ipsum dolor</p>
                 </div>
             </div>
@@ -28,9 +28,9 @@ const Navbar = () => {
                         onClick={() => setIsMenuOpen(!isMenuOpen)} >
                         {isMenuOpen ? 'close' : 'menu'}
                     </span>
-                    <Image className='company-logo' src={'/assets/CompanyLogo.png'} alt={'Logo'} width={36} height={36} />
+                    <Image className='company-logo' src={'/assets/company-brand/company-logo.png'} alt={'Brand logo of Logo'} width={36} height={36} />
                 </div>
-                <Image className='company-name' src={'/assets/CompanyName.png'} alt={'BrandName'} width={107} height={30} />
+                <Image className='company-name' src={'/assets/company-brand/company-name.png'} alt={'BrandName - Logo'} width={107} height={30} />
                 <div className='navbar-action-links'>
                     <span className="material-symbols-outlined">search</span>
                     <span className="material-symbols-outlined">favorite</span>

@@ -14,7 +14,7 @@ const ProductItem: React.FC<ProductItemProps> = (props) => {
             <div className='product-item-image-box'>
                 <Image
                     src={`${props.image}`}
-                    alt={props.title} width={200} height={462}
+                    alt={props.title || 'Product Image'} width={200} height={462}
                     className='product-item-image'
                     style={{ objectFit: 'contain' }}
                 />
@@ -25,9 +25,9 @@ const ProductItem: React.FC<ProductItemProps> = (props) => {
                     Sign in or Create an account to see pricing
                     {
                         props.isLiked ?
-                            <Image src={'/assets/heart_full.png'} alt={'Heart Full'} height={20} width={20} />
+                            <Image src={'/assets/icons/heart-full.png'} alt={'Add to favrorites'} height={20} width={20} />
                             :
-                            <Image src={'/assets/heart_empty.png'} alt={'Heart Empty'} height={20} width={20} />
+                            <Image src={'/assets/icons/heart-empty.png'} alt={'Remove from favrorites'} height={20} width={20} />
                     }
                 </p>
             </div>

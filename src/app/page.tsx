@@ -9,12 +9,11 @@ import Footer from "@/components/Footer";
 
 export const metadata = {
   title: 'Appscrip Task Aadarsh Kumar',
+  description: 'Next.js project fetching products from fakestoreapi.com.',
   icons: {
     icon: '/favicon.ico',
   },
 };
-
-
 
 async function getData() {
   const res = await fetch('https://fakestoreapi.com/products', {
