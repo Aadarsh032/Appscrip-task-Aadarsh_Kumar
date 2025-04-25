@@ -93,12 +93,12 @@ option {
 @media (max-width:640px) {
     .product-item-main {
         height: 277px;
-        width: 168px;
+        width: 160px;
     }
 
     .product-item-image-box {
         height: 224px;
-        width: 168px;
+        width: 160px;
     }
 
     .product-item-title {
@@ -107,6 +107,7 @@ option {
 
     .product-item-description {
         font-size: 10px;
+        color: #888792;
     }
 
     .product-list-recomendation-filter {
