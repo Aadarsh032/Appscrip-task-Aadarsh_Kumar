@@ -9,15 +9,15 @@ const Navbar = () => {
         <div className='navbar'>
             <div className='navbar-tape'>
                 <div className='nav-contact' id='nav-contact-1'>
-                    <Image src={'/assets/stripIcon.png'} alt={'Contact info 1'} width={20} height={20} />
+                    <Image src={'/assets/icons/stripIcon.png'} alt={'Contact info 1'} width={20} height={20} />
                     <p>Lorem ipsum dolor</p>
                 </div>
                 <div className='nav-contact'>
-                    <Image src={'/assets/stripIcon.png'} alt={'Contact info 2'} width={20} height={20} />
+                    <Image src={'/assets/icons/stripIcon.png'} alt={'Contact info 2'} width={20} height={20} />
                     <p>Lorem ipsum dolor</p>
                 </div>
                 <div className='nav-contact' id='nav-contact-2'>
-                    <Image src={'/assets/stripIcon.png'} alt={'Contact info 3'} width={20} height={20} />
+                    <Image src={'/assets/icons/stripIcon.png'} alt={'Contact info 3'} width={20} height={20} />
                     <p>Lorem ipsum dolor</p>
                 </div>
             </div>
