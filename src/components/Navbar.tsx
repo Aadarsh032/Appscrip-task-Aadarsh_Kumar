@@ -4,7 +4,7 @@ import '../styles/Navbar.css'
 import Image from 'next/image'
 
 const Navbar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
     return (
         <div className='navbar'>
             <div className='navbar-tape'>

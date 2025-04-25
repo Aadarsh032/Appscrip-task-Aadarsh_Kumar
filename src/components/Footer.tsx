@@ -43,7 +43,7 @@ const Footer = () => {
                     <h4 className='footer-titles'>mettā muse</h4>
                     <ul className='footer-list-items'>
                         {
-                            metta_muse.map((item, index) => {
+                            metta_muse.map((item: string, index: number) => {
                                 return (
                                     <li key={index} >{item}</li>
                                 )
@@ -56,7 +56,7 @@ const Footer = () => {
                     <h4 className='footer-titles'>QUICK LINKS</h4>
                     <ul className='footer-list-items'>
                         {
-                            quickLinks.map((links, index) => {
+                            quickLinks.map((links: string, index: number) => {
                                 return (
                                     <li key={index} >{links}</li>
                                 )

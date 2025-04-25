@@ -7,37 +7,37 @@ interface MultiSelectDropdownProps {
     options: string[];
 }
 const MultiSelectDropdown = ({ theme, options, title }: MultiSelectDropdownProps) => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [selected, setSelected] = useState<string[]>([]);
-    const isAllSelected = selected.length === options.length;
+    const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
+    const [optionSelected, setOptionSelected] = useState<string[]>([]);
+    const isAllSelected = optionSelected.length === options.length;
     const toggleOption = (option: string) => {
-        setSelected((prevSelected) =>
+        setOptionSelected((prevSelected) =>
             prevSelected.includes(option)
                 ? prevSelected.filter((item) => item !== option)
                 : [...prevSelected, option]
         );
     };
     const handleSelectAll = () => {
-        setSelected(isAllSelected ? [] : [...options]);
+        setOptionSelected(isAllSelected ? [] : [...options]);
     };
     return (
         <div className="dropdown-wrapper">
             <button className={`dropdown-button ${theme}`}
-                onClick={() => setIsOpen(!isOpen)} >
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)} >
                 <span className="drop-down-top">
                     {title}
                     <span className="material-symbols-outlined"> keyboard_arrow_down </span>
                 </span>
                 <span className="drop-down-bottom">All</span>
             </button>
-            {isOpen && (
+            {isDropdownOpen && (
                 <ul className={`dropdown-list ${theme}`}>
                     <li className={`dropdown-select-all ${theme}`}
                         onClick={handleSelectAll}>
                         <u>{isAllSelected ? "Unselect all" : "Select all"}</u>
                     </li>
-                    {options.map((option) => {
-                        const isSelected = selected.includes(option);
+                    {options.map((option: string) => {
+                        const isSelected = optionSelected.includes(option);
                         return (
                             <li key={option}
                                 onClick={() => toggleOption(option)}

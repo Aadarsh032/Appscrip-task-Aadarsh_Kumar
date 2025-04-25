@@ -5,7 +5,7 @@ import ProductItem from './ProductItem'
 import MultiSelectDropdown from './MultiSelectDropdown'
 import CustomDropdown from './CustomDropdown'
 
-type ProductItem = {
+interface ProductItem {
     category: string,
     description: string,
     id: number,
@@ -18,19 +18,13 @@ type ProductItem = {
     title: string
 }
 interface ProductListSectionProps {
-    productListData: {
-        category: string,
-        description: string,
-        id: number,
-        image: string,
-        price: number,
-        rating: {
-            count: number,
-            rate: number
-        },
-        title: string
-    }[];
+    productListData: ProductItem[];
 }
+
+interface ProcessedProductItem extends ProductItem {
+    isLiked: boolean
+}
+
 const idealFor = ["Men", "Women", "Baby & Kids"];
 const occasion = ["Party", "Festival"];
 const work = ["CASUAL", "FORMAL"];
@@ -40,14 +34,14 @@ const suitableFor = ["Kids", "Old", "Women"];
 const rawMaterials = ["Hemp", "Cotton", "Leather"];
 const patterm = ["Check", "Round", "Square"]
 
-function ProcessProductListData(productListData: ProductItem[]) {
+function ProcessProductListData(productListData: ProductItem[]): ProcessedProductItem[] {
     const data = productListData.map((product, index) => {
         return {
             ...product,
             isLiked: index === 3,
         }
     })
-    return data
+    return data;
 }
 
 const ProductListSection: React.FC<ProductListSectionProps> = ({ productListData }) => {
@@ -99,7 +93,7 @@ const ProductListSection: React.FC<ProductListSectionProps> = ({ productListData
                 </div>
                 <div className='product-list-display' style={{ width: toggleFilterBar ? '75%' : '100%' }}>
                     {
-                        processedProductList.map((product, index) => {
+                        processedProductList.map((product: ProcessedProductItem, index: number) => {
                             return (
                                 <ProductItem
                                     key={index}

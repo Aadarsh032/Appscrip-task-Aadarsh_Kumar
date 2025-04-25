@@ -10,28 +10,28 @@ interface CustomDropdownProps {
 }
 
 const CustomDropdown = ({ theme, options, checkSelected, title }: CustomDropdownProps) => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [selected, setSelected] = useState<string>(title);
+    const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
+    const [optionSelected, setOptionSelected] = useState<string>(title);
     const isDark = theme === "dark";
     const handleSelect = (option: string) => {
-        setSelected(option);
-        setIsOpen(false);
+        setOptionSelected(option);
+        setIsDropdownOpen(false);
     };
     return (
         <div className={`custom-dropdown ${isDark ? "dark" : "light"}`}>
             <button className={`custom-button ${isDark ? "dark" : "light"}`}
-                onClick={() => setIsOpen(!isOpen)} >
-                <span className="custom-button-label">{selected?.toUpperCase()}</span>
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)} >
+                <span className="custom-button-label">{optionSelected?.toUpperCase()}</span>
                 <span className="material-symbols-outlined"
                     style={{ color: isDark ? "#fff" : "#000" }}>
                     keyboard_arrow_down
                 </span>
             </button>
 
-            {isOpen && (
+            {isDropdownOpen && (
                 <ul className={`custom-dropdown-list ${isDark ? "dark" : "light"}`}>
-                    {options.map((option) => {
-                        const isSelected = selected === option;
+                    {options.map((option: string) => {
+                        const isSelected = optionSelected === option;
                         return (
                             <li
                                 key={option}
